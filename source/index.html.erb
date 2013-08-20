@@ -1,10 +1,42 @@
 ---
-title: Welcome to Middleman
+title: Viget FED Candidate Quiz
 ---
+<header class="page-header">
+	<h1>
+		<%= current_page.data.title %>
+	</h1>
+</header>
 
-<div class="welcome">
-  <h1>Middleman is Watching</h1>
-  <p class="doc">
-    <%= link_to "Read Online Documentation", "http://middlemanapp.com/" %>
-  </p><!-- .doc -->
-</div><!-- .welcome -->
+<section>
+	<header>
+		<h2>Show and hide divs</h2>
+	</header>
+	<article id="q1-toggleDiv">
+		<ul class="unstyled span3">
+			<li>
+				<a href="#" title="Show #Div1" class="btn btn-primary" data-toggle-id="div1">Show Div 1</a>
+			</li>
+			<li>
+				<a href="#" title="Show #Div2" class="btn btn-primary" data-toggle-id="div2">Show Div 2</a>
+			</li>
+		</ul>
+		<div class="span6 well">
+			<div id="div1">
+				<h3>Div1</h3>
+				<p>
+				Lorem ipsum dolor sit amet, consectetuer
+				Morbi ultricies eros. Aenean augue nisi,
+				ipsum. Vivamus imperdiet semper risus.
+				</p>
+			</div>
+			<div id="div2">
+				<h3>Div2</h3>
+				<p>
+				Lorem ipsum dolor sit amet, consectetuer
+				Morbi ultricies eros. Aenean augue nisi,
+				ipsum. Vivamus imperdiet semper risus.
+				</p>
+			</div>
+		</div>
+	</article>
+</section>
