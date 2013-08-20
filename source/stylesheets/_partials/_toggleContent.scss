@@ -1,0 +1,12 @@
+article {
+	> .row {
+		&.well {
+			> * {
+				@extend .span6;
+			}		
+		}
+	}
+	[id^="div"] {
+
+	}
+}

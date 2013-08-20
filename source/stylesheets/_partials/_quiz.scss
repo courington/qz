@@ -1,0 +1,22 @@
+body {
+	.container {
+		max-width: 940px;
+		min-width: 320px;
+		padding-bottom: 70px;
+		width: auto;
+	}
+	section {
+		overflow: visible;
+		padding: 40px 0 30px;
+		width: auto;
+	}
+	img {
+		margin: 10px;
+	}
+	pre {
+		margin-bottom: 30px;
+	}
+	h3 {
+		line-height: 22px;
+	}
+}

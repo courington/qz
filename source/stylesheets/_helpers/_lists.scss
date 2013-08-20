@@ -1,0 +1,12 @@
+ul {
+	li {
+		> .btn {
+			margin-bottom: 1em;
+		}
+		&:last-child {
+			> .btn {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
