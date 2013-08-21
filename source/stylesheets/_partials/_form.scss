@@ -1,0 +1,71 @@
+form {
+	.row, .row [class*="span"] {
+		margin-left: 0;
+	}
+	fieldset {
+		&.row {
+			margin: 10px;
+		}
+		legend {
+			border-bottom: none;
+			@extend h5;
+			text-transform: uppercase;
+			margin: 0;
+			padding: 10px 0 0;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	.control-group {
+		margin: 0;
+		input {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.inline {
+	margin-bottom: 10px;
+	&:last-child {
+		margin-bottom: 0;
+	}
+	label {
+		// width: 85%;
+		@include calc(width, "100% - 30px");
+		float: right;
+	}
+	input {
+		width: 30px;
+		float: left;
+	}
+	label, input {
+		&:after {
+			content: '';
+			clear: both;
+		}
+	}
+}
+
+#music_user {
+	max-width: 700px;
+	#user_about {
+		.span4 {
+			padding-right: 10px;
+			&:last-child {
+				padding-right: 0;
+			}
+		}
+	}
+	small {
+		font-style: italic;
+		b {
+			display: block;
+			text-transform: uppercase;
+			font-style: normal;
+		}
+	}
+	button[type="submit"] {
+
+	}
+}
