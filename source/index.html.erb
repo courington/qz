@@ -11,17 +11,20 @@ title: Viget FED Candidate Quiz
 	<header>
 		<h2>Show and hide divs</h2>
 	</header>
-	<article id="q1-toggleDiv">
+	<article id="toggle-items">
 		<ul class="unstyled span3">
 			<li>
-				<a href="#" title="Show #Div1" class="btn btn-primary" data-toggle-id="div1">Show Div 1</a>
+				<a href="#" title="Show #Div1" class="btn btn-primary" data-toggle-trigger="div1">Show Div 1</a>
 			</li>
 			<li>
-				<a href="#" title="Show #Div2" class="btn btn-primary" data-toggle-id="div2">Show Div 2</a>
+				<a href="#" title="Show #Div2" class="btn btn-primary" data-toggle-trigger="div2">Show Div 2</a>
+			</li>
+			<li>
+				<a href="#" title="Show #Div3" class="btn btn-primary" data-toggle-trigger="div3">Show Div 3</a>
 			</li>
 		</ul>
 		<div class="span6 well">
-			<div id="div1">
+			<div data-toggle-target="div1" class="toggle-item">
 				<h3>Div1</h3>
 				<p>
 				Lorem ipsum dolor sit amet, consectetuer
@@ -29,8 +32,16 @@ title: Viget FED Candidate Quiz
 				ipsum. Vivamus imperdiet semper risus.
 				</p>
 			</div>
-			<div id="div2">
+			<div data-toggle-target="div2" class="toggle-item">
 				<h3>Div2</h3>
+				<p>
+				Lorem ipsum dolor sit amet, consectetuer
+				Morbi ultricies eros. Aenean augue nisi,
+				ipsum. Vivamus imperdiet semper risus.
+				</p>
+			</div>
+			<div data-toggle-target="div3" class="toggle-item">
+				<h3>Div3</h3>
 				<p>
 				Lorem ipsum dolor sit amet, consectetuer
 				Morbi ultricies eros. Aenean augue nisi,
