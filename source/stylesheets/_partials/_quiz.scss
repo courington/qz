@@ -4,11 +4,21 @@ body {
 		min-width: 320px;
 		padding-bottom: 70px;
 		width: auto;
+		counter-reset: question-num;
 	}
 	section {
 		overflow: visible;
 		padding: 40px 0 30px;
 		width: auto;
+		counter-increment: question-num;
+		header {
+			h2 {
+				&:before {
+					content: counter(question-num)".";
+					margin-right: .5em;
+				}
+			}
+		}
 	}
 	img {
 		margin: 10px;
