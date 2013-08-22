@@ -1,0 +1,27 @@
+<header>
+	<h2>Build-a-tag workshop</h2>
+</header>
+<article>
+	<dl>
+		<dt>
+			<code>
+				&lt;picture&gt; &lt;/picture&gt;
+			</code>
+		</dt>
+		<dd>A <code>&lt;picture&gt;</code> block would allow for greater control over media when desiging/developing for multiple devices. There is a pretty good explanation on how implementation could work over on <a href="http://alistapart.com/article/responsive-images-how-they-almost-worked-and-what-we-need" title="responsive-images-how-they-almost-worked-and-what-we-need">A List Apart</a>. Basically by specifying multiple image files scoped to varying device screen size and/or bandwidth so a large, high-res image could be loaded large screen and a smaller image could be loaded for handheld device or limited bandwidth.</dd>
+
+		<dt>
+			<code>
+				&lt;video&gt; &lt;/video&gt;
+			</code>
+		</dt>
+		<dd>A <code>&lt;video&gt;</code> block that would allow for conditional loading of video format based on screen size and bandwidth. Similar to the picture implementation.</dd>
+
+		<dt>
+			<code>
+				&lt;widget&gt; &lt;/widget&gt;
+			</code>
+		</dt>
+		<dd>With the rise of Web Components (<a href="http://youtu.be/fqULJBBEVQE" title="Web Components: A Tectonic Shift for Web Development">Web Components: A Tectonic Shift for Web Development</a>). The <code>&lt;widget&gt;</code> tag would allow for a semantic block to load de-coupled widgets, such as feeds, buttons, comments, etc. into from javascript rather than just hooking to a <code>&lt;div&gt;</code> id or data attribute. There is currently a proposed <code>&lt;element&gt;</code> tag in the <a href="http://www.w3.org/TR/2013/WD-components-intro-20130606/#using-custom-elements-in-markup" title="W3C Web Components working draft">working draft on Web Components</a>.</dd>
+	</dl>
+</article>
