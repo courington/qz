@@ -1,5 +1,3 @@
-"use strict";
-
 var setBlankDefaultOption = (function () {
 	// privates
 	function setBlank() {
