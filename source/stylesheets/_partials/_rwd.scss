@@ -1,0 +1,73 @@
+.rwd {
+	max-width: 980px;
+	margin: 0 auto;
+	* {
+		@include box-sizing(border-box);
+	}
+	header {
+		background: lighten($black, 85%);
+	}
+
+	section {
+		margin: 0;
+		padding: 0;
+		clear: both;
+		figure {
+			width: 50%;
+			float: left;
+			padding: 1% 2.5%;
+			// background: lighten($black, 85%);
+			img {
+				margin: 0 auto;
+			}
+			figcaption {
+				text-transform: capitalize;
+				margin: 1em 0;
+				background: lighten($black, 85%);
+				text-align: center;
+			}
+		}
+		article {
+			background: lighten($black, 85%);
+			blockquote {
+				font-family: Georgia, Times, serif;
+				position: relative;
+				padding: 1em 1.5em;
+				margin: 0 auto;
+				border: none;
+				border-top: 3px double lighten($black, 50%);
+				// &:before {
+				// 	content: " \" ";
+				// 	font-size: 3em;
+				// 	position: absolute;
+				// 	top: .5em;
+				// 	left: 0;
+				// }
+				cite {
+					margin: 1em 0;
+					display: block;
+					color: lighten($black, 50%);
+					text-transform: uppercase;
+					&:before {
+						content: "- ";
+					}
+					span {
+						text-transform: none;
+						font-style: italic;
+					}
+				}
+			}
+			a {
+				text-transform: capitalize;
+				display: block;
+				text-align: center;
+				&:after {
+					content: "»";
+				}
+			}
+		}
+	}
+	footer {
+		background: lighten($black, 85%);
+	}
+}
