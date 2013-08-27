@@ -1,6 +1,5 @@
-"use strict";
-
 var toggleModule = (function () {
+  "use strict";
   // privates
   var scope = $('#toggle-items');
   var triggers = $(scope).find('a');
