@@ -12,6 +12,8 @@ var select = (function () {
 			var val = input[0].value;
 			select(val);
 		});
+		// refactor using...
+		// document.querySelectorAll('div .row')
 	}
 
 	function select(val) {

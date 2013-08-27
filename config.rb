@@ -21,7 +21,7 @@
 #
 # A path which all have the same layout
 with_layout :rwd do
-  page "/rwd"
+  page "/q8"
 end
 
 # Proxy pages (http://middlemanapp.com/dynamic-pages/)
