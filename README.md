@@ -12,3 +12,7 @@
 ## Run Middleman ##
 
     $ middleman
+
+## View Live ##
+
+[chasecourington.com/viget-fed-test](http://chasecourington.com/viget-fed-test/ "Viget FED Test")
