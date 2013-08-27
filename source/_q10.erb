@@ -2,12 +2,18 @@
 	<h2>Flatten the object</h2>
 </header>
 <article>
-	<pre>{'index':
-	{'about':
-		{
-			'team': true,
-			'company': ['Jim', 'Barry']
+	<div class="row">
+		<pre>{'index':
+		{'about':
+			{
+				'team': true,
+				'company': ['Jim', 'Barry']
+			}
 		}
-	}
-}</pre>
+	}</pre>
+	</div>
+	<div class="row">
+		<button class="btn btn-primary btn-small span2" id="flatten_trigger">Flatten</button>
+		<code class="span10">URL:<span id="flatten_target"></span></code>
+	</div>
 </article>

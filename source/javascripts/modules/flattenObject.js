@@ -34,10 +34,21 @@ var flattenObject = (function () {
 	    return into;
 	}
 
+  function callFlatten(trigger, target, url) {
+    trigger = document.getElementById(trigger);
+    target = document.getElementById(target);
+    trigger.addEventListener('click', function(e){
+      e.preventDefault();
+      flatten(url);
+      target.innerHTML = Object.keys( flatten(url) );
+    });
+  }
+
   return {
     init: function() {
     	// console.log(foobar);
-    	flatten(foobar);
+      // flatten(foobar);
+      callFlatten("flatten_trigger", "flatten_target", foobar);
     }
   };
 
