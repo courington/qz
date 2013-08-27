@@ -1,0 +1,8 @@
+{'index':
+	{'about':
+		{
+			'team': true,
+			'company': ['Jim', 'Barry']
+		}
+	}
+}
