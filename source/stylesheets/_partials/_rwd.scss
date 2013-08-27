@@ -1,13 +1,34 @@
-.rwd {
+.q8 {
 	max-width: 980px;
 	margin: 0 auto;
 	* {
 		@include box-sizing(border-box);
 	}
-	header {
-		background: lighten($black, 85%);
+	header, footer {
+		background: lighten($black, 90%);
+		padding: 1em 2.5%;
 	}
-
+	header {
+		[class^="ss-"] {
+			line-height: 1.5;
+			clear: left;
+			&:before {
+				font-size: 150%;
+				width: 30px;
+				float: left;
+				display: inline-block;
+			}
+			&:after {
+				content: '';
+				display: block;
+				clear: left;
+			}
+			> div {
+				float: left;
+			}
+		}
+		margin-bottom: 1em;
+	}
 	section {
 		margin: 0;
 		padding: 0;
@@ -16,7 +37,6 @@
 			width: 50%;
 			float: left;
 			padding: 1% 2.5%;
-			// background: lighten($black, 85%);
 			img {
 				margin: 0 auto;
 			}
@@ -27,22 +47,23 @@
 				text-align: center;
 			}
 		}
-		article {
+		&.main {
 			background: lighten($black, 85%);
+		}
+		article {
+			// background: lighten($black, 85%);
+			@extend .top-edge;
+			&:first-child {
+				&:before {
+					border-top: none;
+				}
+			}
 			blockquote {
 				font-family: Georgia, Times, serif;
 				position: relative;
 				padding: 1em 1.5em;
 				margin: 0 auto;
 				border: none;
-				border-top: 3px double lighten($black, 50%);
-				// &:before {
-				// 	content: " \" ";
-				// 	font-size: 3em;
-				// 	position: absolute;
-				// 	top: .5em;
-				// 	left: 0;
-				// }
 				cite {
 					margin: 1em 0;
 					display: block;
@@ -58,16 +79,182 @@
 				}
 			}
 			a {
-				text-transform: capitalize;
 				display: block;
+				width: 90%;
+				margin: 0 auto;
+				padding: 1em 0 2em;
+				text-transform: capitalize;
 				text-align: center;
 				&:after {
 					content: "»";
 				}
+				@extend .top-edge;
 			}
 		}
 	}
-	footer {
-		background: lighten($black, 85%);
+	.top-edge {
+		&:before {
+			content: "";
+			display: block;
+			border-top: 3px double lighten($black, 75%);
+		}
+	}
+}
+@media all and (min-width: 600px) {
+	.q8 {
+		padding: 0 2.5%;
+		section {
+			&.gallery {
+				width: 105%;
+				figure {
+					&:nth-child(2n+1) {
+						margin-left: -2.5%;	
+					}
+					figcaption {
+						margin-top: 0;
+					}
+					div {
+						overflow: hidden;
+						height: 170px;
+					}
+					img {
+						margin: 0 auto;
+						max-width: 600px;
+						width: 600px;
+						margin-left: -25%;
+					}
+				}
+			}
+			&.main {
+				@include border-radius(.25em);
+			}
+			article {
+				blockquote {
+					position: relative;
+					width: 90%;
+					&:before {
+						position: absolute;
+						left: -2.5%;
+						content: "\201C";
+						font-size: 400%;
+						line-height: .75;
+						color: lighten($black, 50%);
+					}
+				}
+			}
+		}
+		header {
+			@include border-radius(0 0 .25em .25em);
+		}
+		footer {
+			@include border-radius(.25em .25em 0 0);
+			margin-top: 1em;
+		}
+	}	
+}
+@media all and (min-width: 980px) {
+	.q8 {
+		header,
+		footer {
+			padding: 1em 0;
+			> div,
+			> [class^="ss-"],
+			> small {
+				width: (100% / 3);
+				padding: 1em;
+				margin: 0;
+				clear: none;
+				float: left;
+			}
+			&:after {
+				content: '';
+				display: block;
+				clear: left;
+			}
+			.ss-mail {
+				position: relative;
+				top: -1em;
+				&:before {
+					opacity: 0;
+				}
+			}
+			[class^="ss-"] {
+				line-height: 1;
+				&:before {
+					font-size: 200%;
+				}
+			}
+		}
+		footer {
+			> div,
+			> small {
+				text-align: center;
+				&:first-child {
+					text-align: left;
+				}
+				&:last-child {
+					text-align: right;
+				}
+				a {
+					&:after {
+						content: " \2022";
+						color: $black;
+					}
+					&:last-child {
+						&:after {
+							content: "";
+						}
+					}
+				}	
+			}
+		}
+		section {
+			&.gallery {
+				width: 100%;
+				figure {
+					width: (100% / 3) - 1%;
+					padding: 1em;
+					margin: 0 1.5% 1em 0;
+					background: lighten($black, 95%);
+					&:last-child {
+						margin-right: 0;
+					}
+					&:nth-child(2n+1) {
+						margin-left: 0;	
+					}
+					figcaption {
+						margin-bottom: 0;
+					}
+				}
+			}
+			&.main {
+				&:after {
+					content: '';
+					display: block;
+					clear: left;
+				}
+				article {
+					width: (100% / 2);
+					float: left;
+					padding: 2em 2.5% 0;
+					border-left: 3px double lighten($black, 75%);
+					&:first-child {
+						border-left: none;
+						&:before {
+							border-top: 3px double lighten($black, 75%);
+						}
+					}
+					blockquote {
+						width: 95%;
+					}
+					a {
+						text-align: right;
+						&:before {
+							border-top: none;
+						}
+					}
+				}
+			}
+		}
 	}
 }

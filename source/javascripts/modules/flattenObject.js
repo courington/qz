@@ -14,7 +14,7 @@ var flattenObject = (function () {
 	    into = into || {};
 	    prefix = prefix || "";
 
-	    for (var k in obj) {
+    	for (var k in obj) {
 	    	// console.log(k);
         if (includePrototype || obj.hasOwnProperty(k)) {
           var prop = obj[k];
@@ -29,6 +29,7 @@ var flattenObject = (function () {
           }
         }
 	    }
+		    
 	    console.log(into);
 	    return into;
 	}

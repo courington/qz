@@ -12,12 +12,11 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "The Middleman" %></title>
     
-    <%= stylesheet_link_tag "all" %>
+    <%= stylesheet_link_tag "all", "webfonts/ss-standard" %>
+    <!-- <link href="webfonts/ss-standard.css" rel="stylesheet" /> -->
   </head>
   
   <body class="<%= page_classes %>">
     <%= yield %>
-    
-    <%= javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js", "all" %>
   </body>
 </html>
