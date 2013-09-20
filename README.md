@@ -1,4 +1,4 @@
-# Front-End Dev Quiz for Viget Labs #
+# Front-End Dev Quiz #
 
 ## Install Middleman ##
 
@@ -6,13 +6,10 @@
 
 ## Clone Repo ##
 
-    $ git clone git@github.com:courington/viget_fed_quiz.git
+    $ git clone git@github.com:courington/fed-quiz.git
     $ bundle install
 
 ## Run Middleman ##
 
     $ middleman
 
-## View Live ##
-
-[chasecourington.com/viget-fed-test](http://chasecourington.com/viget-fed-test/ "Viget FED Test")
